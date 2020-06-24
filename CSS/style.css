@@ -1,0 +1,626 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@400;500;600;700&family=Piedra&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Baloo Chettan 2", cursive;
+  line-height: 1.5;
+  color:rgb(155, 145, 145)
+}
+h1 {
+  font-family: "Baloo Chettan 2", cursive;
+  color:rgb(155, 145, 145)
+}
+button {
+  font-family: "Baloo Chettan 2", cursive;
+  color: white;
+}
+.title-text {
+  font-size: 40px;
+  text-align: center;
+  color:rgb(155, 145, 145)
+}
+/* .logo-text{
+  color: wheat;
+  letter-spacing: 5px;
+  font-size: 20px;
+} */
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: space-around; 
+  height: 13%;
+  background-color: #ec3237; 
+  position: fixed; 
+  z-index: 1;
+  width: 100%;
+  /* overflow: hidden;  */
+}
+
+.logo-img {
+  width: 15%;
+  height:100%; 
+}
+.nav-links {
+  display: flex;
+  width: 25%;
+  
+}
+.nav-links li {
+  list-style: none;
+  margin-right: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 77px;
+}
+#social-icons1{
+  display: none;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(70, 59, 59);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  nav{
+    height: 65px;
+  }
+  .nav-links {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav{
+    height: auto;
+  }
+  
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    top: 8vh;
+    background: #ec3237;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+  }
+  .logo-img{
+    height: auto;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .burger {
+    display: inline-block;
+  }
+  #social-icons1{
+    display: block;
+    margin: 10px;
+  }
+  #social-icons1 a .plus1{
+    font-size: 30px;
+    margin: 10px;
+    padding: 0;
+  }
+  #social-icons1 p{
+color: white;
+}
+}
+
+
+.nav-active {
+  transform: translateX(0%);
+}
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* header --------------------------------------*/
+.header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/images/peppered-bg.png") center/cover no-repeat fixed;
+  margin-top: auto;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+.hero .title {
+  color:white;
+  font-size: 50px;
+  /* font-family: "Piedra", cursive; */
+  font-family: "Baloo Chettan 2", cursive;
+  font-weight: bolder;
+  font-size: 70px;
+}
+.para1 {
+  color: white;
+  text-align: center;
+}
+
+.order-button {
+  background-color: #ec3237;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  margin: 30px 0 0 30px;
+  border-radius: 200px;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.order-button:hover {
+  background: transparent;
+}
+.pulsate {
+  animation: pulsate 5s ease-in-out;
+  animation-iteration-count: infinite;
+  opacity: 0.9;
+  color: red;
+}
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+#order {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 768px){
+  .hero .title {
+    color: white;
+    font-size: 40px;
+    /* font-family: "Piedra", cursive; */
+    font-family: "Baloo Chettan 2", cursive;
+    text-align: center;
+  }
+  .para1 {
+    color: white;
+    text-align: center;
+  }
+
+}
+
+/* About Us ---------------------- */
+#about {
+  padding: 40px;
+}
+.about {
+  margin: 30px 0;
+  display: flex;
+}
+.about-center{
+  display: flex;
+}
+.about-icon .fas {
+  font-size: 60px;
+  color: #ec3237;
+  margin-right: 20px;
+}
+
+.about-subtitle {
+  text-transform: capitalize;
+  color: #ec3237;
+  font-size: 25px;
+}
+
+.about-info {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.about-icon:hover .fas,
+.about-subtitle:hover {
+  transition: transform 2s ease, color 2s ease;
+  transform: translateY(-10px);
+  color: rgb(78, 53, 53);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 576px) {
+  .about-center {
+    display: flex;
+    flex-wrap: wrap;
+     justify-content: space-between; 
+  }
+  .about {
+    flex: 0 0 calc(50%-16px);
+  }
+}
+
+@media screen and (min-width: 972px) {
+  .about-center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about {
+    flex: 0 0 calc(33.3%-16px);
+  }
+}
+
+/* Menu Section */
+
+.menu-image {
+  min-height: 50vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    url(/images/menu-image-bg.png) center/cover fixed no-repeat;
+}
+/* .menu {
+  text-align: center;
+} */
+.menu-text {
+  min-height: 100vh;
+  align-items: center;
+  background: #ec3237;
+  columns: #000;
+  padding: 40px 0;
+}
+.menu-text-center {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.menu-text h1 {
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.menu-text p {
+  color: white;
+  margin: 20px 0;
+  line-height: 2;
+}
+a .menu-button {
+  display: inline-block;
+  background-color: rgb(78, 53, 53);
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  color: wheat;
+  margin: 29px 0 0 29px;
+  border-radius: 200px;
+  border: none;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+a .menu-button:hover {
+  background: transparent;
+  color: white;
+  border: none;
+  text-decoration: none;
+}
+@media screen and (min-width: 776px) {
+  .menu {
+    display: flex;
+  }
+  .menu-text {
+    flex: 0 0 30%;
+  }
+  .menu-image {
+    flex: 0 0 70%;
+    clip-path: polygon(0 0, 100% 0, 50% 100% 0 100%);
+  }
+  .menu {
+    background: white;
+  }
+}
+Social icons
+/* #social-icons {
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+
+#social-icons a {
+  display: inline-block;
+  padding: 5px;
+  margin: 5px 5px;
+  font-size: 40px;
+  border-radius: 5px;
+}
+
+#social-icons a :hover {
+  transform: translateY(-20px);
+}
+.facebook {
+  color: #3b5998;
+}
+.twitter {
+  color: #38a1f3;
+}
+.instagram {
+  color: #e1306c;
+}
+.plus {
+  color: #db4a39;
+} */
+/* numbers own */
+/* .number {
+  background: url(/images/numbers-bg.png) cover/center fixed no-repeat;
+  text-align: center;
+} */
+
+ #food {
+  padding: 0px;
+
+}
+.food-container {
+  max-width: 100vw;
+  margin-top: 4px; 
+}
+.food-btn1{
+  display: block;
+  background: #ec3237;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 12px 32px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 400px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  outline: none;
+}
+.food-btn1:hover {
+  color: #ec3237;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.card {
+  position: relative;
+  background: #db4a39; linear-gradient(rgba(205, 96, 0, 0.7), rgba(205, 96, 0, 0.7));
+  color: 000;
+  overflow:hidden!important;
+  padding: 0!important;
+  border: none!important;
+  border-radius: 20px !important;
+  height: 40vh!important;
+  width: 300px!important;
+  align-items: center !important;
+}
+
+.food-img {
+  width: 100%;
+  min-height: 100%;
+  display: inline;
+  transition: transform 4s; 
+}
+
+.img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 4s;
+  color: white;
+  
+}
+
+ .img-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  font-size: 20px;
+  opacity: 0;
+  color: #000;
+  transition: opacity 4s;
+} 
+
+.img-text h1 {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: "Baloo Chettan 2", cursive;
+}
+.card:hover img {
+  opacity: 0.4;
+  transform: scale(1.3);
+  color: transparent;
+}
+.card:hover .img-text,
+.card:hover .img-footer {
+  opacity: 1;
+}
+.food-btn {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 12px 32px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 182px;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+  outline: none;
+}
+
+ .food-btn:hover {
+  color: #ec3237;
+  background: white;
+  border: none;
+  outline: none; 
+}
+
+.fas {
+  font-size: 30px;
+}
+@media screen and (min-width:576px){
+  .food-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    margin: auto;
+  }
+  .card{
+    align-items: center !important;
+  }
+  
+}
+
+@media screen and (min-width:992px){
+  .food-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5px; 
+    margin: auto;
+}
+.card{
+  align-items: center !important;
+}
+
+}
+
+footer{
+  background: #ec3237;
+  padding: 90px 0;
+  color: white;
+}
+
+.footer-container{
+  max-width: 1300px;
+  margin: 10px 40px 40px 0;
+  padding: 0 20px ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+#social-icons{
+  margin: 20px 0;
+}
+
+#social-icons a{
+  color: #fff;
+  margin-right: 25px;
+  font-size: 22px;
+  text-decoration: none;
+  transition: .3s linear;
+}
+#social-icons a:hover{
+  color: #fc5c65;
+}
+.middle-col p{
+  margin: 40px 40px 0px 0;
+  text-align:left;
+  padding-bottom: 30px;
+}
+
+
+.left-col li{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+
+
+}
+
+@media screen and (max-width:960px){
+  .footer-container{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+  }
+  .left-col{
+    
+    list-style: none;
+    position: relative;
+    right: 64px;
+  
+  }
+  .middle-col{
+    width: 100%;
+  }
+.right-col{
+    width: 100%;
+    margin-bottom: 60px;
+    list-style: none;
+  }
+
+
+
+}
+
+
